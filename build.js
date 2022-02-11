@@ -1,6 +1,7 @@
 const esbuild = require('esbuild');
 const { htmlPlugin } = require('@craftamap/esbuild-plugin-html');
 
+const cliOptions = new Set(process.argv);
 const options = {
     // NOTE: code spliting build test
     format: 'esm',
@@ -14,6 +15,7 @@ const options = {
     bundle: true,
     metafile: true,
     outdir: 'dist/',
+    watch: cliOptions.has('--watch'),
     plugins: [
         htmlPlugin({
             files: [
@@ -28,6 +30,7 @@ const options = {
                         <head>
                             <meta charset="UTF-8">
                             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <base href="/" target="_self">
                         </head>
                         <body>
                             <div id="root"></div>
