@@ -16,6 +16,10 @@ const options = {
     metafile: true,
     outdir: 'dist/',
     watch: cliOptions.has('--watch'),
+    loader: {
+        '.png': 'file',
+        '.jpg': 'file',
+    },
     plugins: [
         htmlPlugin({
             files: [
