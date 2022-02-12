@@ -211,10 +211,10 @@ function Home() {
   useEffect(() => {
     const t1 = setTimeout(() => {
       setIsShow(true);
-    }, 500);
+    }, 250);
     const t2 = setTimeout(() => {
       setExCls(true);
-    }, 1000);
+    }, 500);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
