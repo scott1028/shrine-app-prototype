@@ -11,7 +11,9 @@
     "wait-on": "^6.0.1"
   },
   "dependencies": {
+    "@mui/styles": "^5.4.1",
     "core-js": "3.21.0",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "5"
